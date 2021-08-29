@@ -48,9 +48,52 @@ export const Setting = styled.div`
     padding-top: 10px;
     text-align: center;
   }
-  
 `;
 
 export const Container = styled.div`
+  width: 100%;
+  height: 500px;
+  background-color: #c4c4c4;
 
-`
+  .Logo {
+    background: #5c5858;
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(20px);
+
+    img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+
+  .name {
+    margin: 60px 20px;
+    text-align: center;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    text-shadow: 0 3px white;
+  }
+
+  .sample_info {
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-shadow: 0 2px white;
+  }
+`;

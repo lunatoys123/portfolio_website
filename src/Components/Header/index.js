@@ -1,5 +1,12 @@
 import React from "react";
-import { BackGround, Navbar, LinkStyle, Setting, Container } from "./Header.style";
+import {
+  BackGround,
+  Navbar,
+  LinkStyle,
+  Setting,
+  Container,
+} from "./Header.style";
+import icon from '../../Images/icon.png';
 const Header = () => {
   return (
     <>
@@ -9,27 +16,40 @@ const Header = () => {
           <LinkStyle>
             <ul>
               <li>
-                <a>Contact us</a>
+                <a href="">Contact us</a>
               </li>
               <li>
-                <a>Learning</a>
+                <a href="">Learning</a>
               </li>
               <li>
-                <a>work Project</a>
+                <a href="">work Project</a>
               </li>
               <li>
-                <a>Activities</a>
+                <a href="">Activities</a>
               </li>
             </ul>
           </LinkStyle>
           <Setting>
-            <span>中</span>
+            <span>chinese</span>
             <span>Eng</span>
           </Setting>
         </Navbar>
         <Container>
-          
-        </Container>        
+          <div className="Logo">
+            <img src={icon} alt="logo" />
+          </div>
+          <div className="name">
+            <span>Lau Kin Tung</span>
+          </div>
+          <div className="sample_info">
+            <p>
+              I’m a year 3 student in HKBU, studying on computer science.
+              Experience in JAVA, html, javascript. Curently working at Audit
+              Commission as one year placement. Hope to be a software engineer
+              in the future
+            </p>
+          </div>
+        </Container>
       </BackGround>
     </>
   );
