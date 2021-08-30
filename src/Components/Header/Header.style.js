@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const BackGround = styled.div`
   width: 100%;
   height: 100%;
+  filter: drop-shadow(1px 1px 1px black);
 `;
 
 export const Navbar = styled.div`
@@ -25,10 +26,15 @@ export const LinkStyle = styled.div`
   ul {
     list-style-type: none;
     padding: 0px;
-    margin: 0px;
+    margin: auto;
     display: flex;
     flex-grow: 1;
     text-align: center;
+    
+  }
+
+  a{
+    text-decoration: none;
   }
 
   ul li {
