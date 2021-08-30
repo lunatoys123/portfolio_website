@@ -1,32 +1,27 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import { ListGroup } from "react-bootstrap";
-import Col from "react-bootstrap/Col";
-import './Navbar.style.css';
+import Navbar from "react-bootstrap/Navbar";
+import { Nav } from "react-bootstrap";
 const Header = () => {
   return (
-    <Container fluid className="Container">
-      <Row>
-        <Col sm={2}>
-          <p className="title">Lau Kin Tung profolio</p>
-        </Col>
-        <Col sm={8}>
-          <ListGroup horizontal className='ListgroupCenter'>
-            <ListGroup.Item>Contact us</ListGroup.Item>
-            <ListGroup.Item>Contact us</ListGroup.Item>
-            <ListGroup.Item>Contact us</ListGroup.Item>
-            <ListGroup.Item>Contact us</ListGroup.Item>
-          </ListGroup>
-        </Col>
-        <Col sm={2}>
-        <ListGroup horizontal>
-            <ListGroup.Item>chinese</ListGroup.Item>
-            <ListGroup.Item>English</ListGroup.Item>
-          </ListGroup>
-        </Col>
-      </Row>
-    </Container>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand>Lau Kin Tung Portfolio</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link>Contact me</Nav.Link>
+            <Nav.Link>Learning</Nav.Link>
+            <Nav.Link>work projects</Nav.Link>
+            <Nav.Link>Activities</Nav.Link>
+          </Nav>
+          <Nav>
+            <Nav.Link>chinese</Nav.Link>
+            <Nav.Link>English</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
