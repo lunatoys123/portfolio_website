@@ -26,6 +26,7 @@ export const SiteMap = styled.h5`
   font-weight: normal;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 18px;
+  text-align: center;
 `;
 
 export const Follow = styled.div`

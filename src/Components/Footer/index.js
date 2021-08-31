@@ -19,46 +19,7 @@ const Footer = () => {
     <Wrapper>
       <Container>
         <Row>
-          <Col sm={8}>
-            <Title>SiteMap</Title>
-          </Col>
-          <Col sm={4}>
-            <Title>Follow me</Title>
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={2}>
-            <SiteMap>Contact me</SiteMap>
-          </Col>
-          <Col sm={2}>
-            <SiteMap>Learning</SiteMap>
-          </Col>
-          <Col sm={2}>
-            <SiteMap>Work Projects</SiteMap>
-          </Col>
-          <Col sm={2}>
-            <SiteMap>Activities</SiteMap>
-          </Col>
-          <Col sm={4}>
-            <FollowLayout>
-              <Follow>
-                <AiFillFacebook />
-                Facebook
-              </Follow>
-              <Follow>
-                <AiFillGithub />
-                GitHub
-              </Follow>
-              <Follow>
-                <AiFillPhone />
-                66426006
-              </Follow>
-              <Follow>
-                <AiFillWechat />
-                wechat
-              </Follow>
-            </FollowLayout>
-          </Col>
+          <SiteMap>siteMap</SiteMap>
         </Row>
       </Container>
       <hr />
@@ -67,6 +28,22 @@ const Footer = () => {
           CopyRight <span>&copy;</span> belong to Lau Kin Tung. All Right
           Reserved
         </small>
+        <Follow>
+          <AiFillFacebook />
+          Facebook
+        </Follow>
+        <Follow>
+          <AiFillGithub />
+          GitHub
+        </Follow>
+        <Follow>
+          <AiFillPhone />
+          66426006
+        </Follow>
+        <Follow>
+          <AiFillWechat />
+          wechat
+        </Follow>
       </CopyRight>
     </Wrapper>
   );

@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Background, CenterElement, Logo } from "./Header.style";
 import icon from "./../../Images/icon.png";
-const Header = () => {
+import { Title, SimpleInfo } from "./data";
+const Header = ({ English }) => {
+  const [title, setTitle] = useState(
+    Title.find((t) => t.language === "English")["name"]
+  );
+  const [Intro, setIntro] = useState(
+    SimpleInfo.find((t) => t.language === "English")["Info"]
+  );
+  useEffect(() => {
+    if (English) {
+      const { name } = Title.find((t) => t.language === "English");
+      const { Info } = SimpleInfo.find((t) => t.language === "English");
+
+      setTitle(name);
+      setIntro(Info);
+    } else {
+      const { name } = Title.find((t) => t.language === "chinese");
+      const { Info } = SimpleInfo.find((t) => t.language ==='chinese');
+
+      setTitle(name);
+      setIntro(Info);
+    }
+  }, [English]);
   return (
-   <Background>
+    <Background>
       <Container fluid>
         <Row>
           <Col>
@@ -18,24 +40,19 @@ const Header = () => {
         <Row>
           <Col>
             <CenterElement>
-              <h2>Lau Kin Tung</h2>
+              <h2>{title}</h2>
             </CenterElement>
           </Col>
         </Row>
         <Row>
           <Col>
             <CenterElement>
-              <p align="center">
-                I’m a year 3 student in HKBU, studying on computer science.
-                Experience in JAVA, html, javascript. Curently working at Audit
-                Commission as one year placement. Hope to be a software engineer
-                in the future
-              </p>
+              <p align='center'>{Intro}</p>
             </CenterElement>
           </Col>
         </Row>
-    </Container>
-   </Background>
+      </Container>
+    </Background>
   );
 };
 
