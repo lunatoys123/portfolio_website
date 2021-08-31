@@ -1,27 +1,73 @@
 import React from "react";
-import { Wrapper } from "./Footer.style";
+import {
+  Wrapper,
+  CopyRight,
+  Title,
+  SiteMap,
+  Follow,
+  FollowLayout,
+} from "./Footer.style";
 import { Container, Row, Col } from "react-bootstrap";
-import { AiFillFacebook, AiFillGithub, AiFillPhone, AiFillWechat } from "react-icons/ai";
+import {
+  AiFillFacebook,
+  AiFillGithub,
+  AiFillPhone,
+  AiFillWechat,
+} from "react-icons/ai";
 const Footer = () => {
   return (
     <Wrapper>
       <Container>
         <Row>
-            <Col><h3 align="center">SiteMap</h3></Col>
+          <Col sm={8}>
+            <Title>SiteMap</Title>
+          </Col>
+          <Col sm={4}>
+            <Title>Follow me</Title>
+          </Col>
         </Row>
         <Row>
-          <Col><h5>Contact me</h5></Col>
-          <Col><h5>Learning</h5></Col>
-          <Col><h5>Work Projects</h5></Col>
-          <Col><h5>Activities</h5></Col>
-        </Row>
-        <Row>
-            <Col><AiFillFacebook size={20} /> Facebook</Col>
-            <Col><AiFillGithub size={20} /> Github</Col>
-            <Col><AiFillPhone size={20} /> 66426006</Col>
-            <Col><AiFillWechat size={20} /> wechat</Col>
+          <Col sm={2}>
+            <SiteMap>Contact me</SiteMap>
+          </Col>
+          <Col sm={2}>
+            <SiteMap>Learning</SiteMap>
+          </Col>
+          <Col sm={2}>
+            <SiteMap>Work Projects</SiteMap>
+          </Col>
+          <Col sm={2}>
+            <SiteMap>Activities</SiteMap>
+          </Col>
+          <Col sm={4}>
+            <FollowLayout>
+              <Follow>
+                <AiFillFacebook />
+                Facebook
+              </Follow>
+              <Follow>
+                <AiFillGithub />
+                GitHub
+              </Follow>
+              <Follow>
+                <AiFillPhone />
+                66426006
+              </Follow>
+              <Follow>
+                <AiFillWechat />
+                wechat
+              </Follow>
+            </FollowLayout>
+          </Col>
         </Row>
       </Container>
+      <hr />
+      <CopyRight>
+        <small>
+          CopyRight <span>&copy;</span> belong to Lau Kin Tung. All Right
+          Reserved
+        </small>
+      </CopyRight>
     </Wrapper>
   );
 };

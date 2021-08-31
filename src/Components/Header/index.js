@@ -2,7 +2,6 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-//import "./HeaderExtra.css";
 import { Background, CenterElement, Logo } from "./Header.style";
 import icon from "./../../Images/icon.png";
 const Header = () => {
@@ -26,7 +25,7 @@ const Header = () => {
         <Row>
           <Col>
             <CenterElement>
-              <p>
+              <p align="center">
                 I’m a year 3 student in HKBU, studying on computer science.
                 Experience in JAVA, html, javascript. Curently working at Audit
                 Commission as one year placement. Hope to be a software engineer
