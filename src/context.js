@@ -4,7 +4,9 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [isEnglish, setIsEnglish] = useState(true);
-
+  const [location, setLocation] = useState({});
+  const [page, setPage] = useState({ name: "", link: [] });
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const setEnglish = () => {
     setIsEnglish(true);
   };
@@ -13,16 +15,32 @@ const AppProvider = ({ children }) => {
     setIsEnglish(false);
   };
 
-  const openSubMenu = (text) => {
-    console.log(text);
-    links.map((SingleLink, index) => {
-      const { link } = SingleLink;
-      console.log(link);
-    });
+  const openSubMenu = (text, coordinate) => {
+    if (isEnglish) {
+      const page = links.find(
+        (L) => L.language === "English" && L.name === text
+      );
+      setPage(page);
+      setLocation(coordinate);
+      setIsSubMenuOpen(true);
+    }
+  };
+
+  const closeSubMenu = () => {
+    setIsSubMenuOpen(false);
   };
   return (
     <AppContext.Provider
-      value={{ isEnglish, setEnglish, setChinese, openSubMenu }}
+      value={{
+        isEnglish,
+        setEnglish,
+        setChinese,
+        openSubMenu,
+        closeSubMenu,
+        page,
+        location,
+        isSubMenuOpen,
+      }}
     >
       {children}
     </AppContext.Provider>

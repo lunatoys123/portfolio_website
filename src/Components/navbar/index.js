@@ -5,35 +5,34 @@ import { Nav } from "react-bootstrap";
 import { links } from "./data";
 import { useGlobalContext } from "../../context";
 const Header = () => {
-  const { isEnglish, setEnglish, setChinese, openSubMenu } = useGlobalContext();
+  const { isEnglish, setEnglish, setChinese, openSubMenu, closeSubMenu } = useGlobalContext();
   const [linkname, setLinkname] = useState([]);
   const displaySubMenu = (e) => {
     const page = e.target.textContent;
     const tempPos = e.target.getBoundingClientRect();
-    const center = (tempPos.left + tempPos.right) / 2;
-    const bottom = tempPos.bottom - 5;
-    openSubMenu(page);
+    const center = tempPos.left ;
+    const bottom = tempPos.bottom;
+    openSubMenu(page, {center, bottom});
   };
 
   useEffect(() => {
     setLinkname([]);
-    links.map((SingleLink, index) => {
-      const { link } = SingleLink;
-      if (isEnglish) {
-        let thislink = link.find((L) => L.language === "English");
-        const { name } = thislink;
-        setLinkname((L) => [...L, name]);
-      } else {
-        let thislink = link.find((L) => L.language === "chinese");
-        const { name } = thislink;
-        setLinkname((L) => [...L, name]);
-      }
-    });
+    if (isEnglish) {
+      let EnglishTitle = links.filter((L) => L.language === "English");
+      EnglishTitle.map((item) => {
+        setLinkname((name) => [...name, item.name]);
+      });
+    } else {
+      let ChineseTitle = links.filter((L) => L.language === "chinese");
+      ChineseTitle.map((item) => {
+        setLinkname((name) => [...name, item.name]);
+      });
+    }
   }, [isEnglish]);
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand>Lau Kin Tung Portfolio</Navbar.Brand>
+        <Navbar.Brand onMouseOver={closeSubMenu}>Lau Kin Tung Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

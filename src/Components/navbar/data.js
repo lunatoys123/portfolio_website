@@ -1,59 +1,42 @@
 export const links = [
   {
-    link: [
-      {
-        language: "English",
-        name: "Contact us",
-        sublink: [],
-      },
-      {
-        language: "chinese",
-        name: "聯絡我們",
-        sublink: [],
-      },
-    ],
+    language: "English",
+    name: "About me",
+    link: [],
   },
   {
-    link: [
-      {
-        language: "English",
-        name: "Learning",
-        sublink: ["Year 1", "Year 2", "Year 3", "Year 4"],
-      },
-      {
-        language: "chinese",
-        name: "學習",
-        sublink: ["大學一年級, 大學二年級", "大學三年級", "大學四年級"],
-      },
-    ],
+    language: "English",
+    name: "Learning",
+    link: ["Year 1", "Year 2", "Year 3", "Year 4"],
   },
   {
-    link: [
-      {
-        language: "English",
-        name: "work Projects",
-        sublink: [],
-      },
-      {
-        language: "chinese",
-        name: "項目",
-        sublink: [],
-      },
-    ],
+    language: "English",
+    name: "Work Projects",
+    link: [],
   },
   {
-    link: [
-      {
-        language: "English",
-        name: "Activities",
-        sublink: [],
-      },
-
-      {
-        language: "chinese",
-        name: "活動",
-        sublink: [],
-      },
-    ],
+    language: "English",
+    name: "Blog",
+    link: [],
   },
+  {
+    language: "chinese",
+    name: "關於我",
+    link: [],
+  },
+  {
+    language: "chinese", 
+    name: '學習',
+    link:['大學一年級','大學二年級','大學三年級','大學四年級']
+  },
+  {
+    language: "chinese",
+    name:'項目',
+    link:[]
+  },
+  {
+    language: "chinese",
+    name: '關於我',
+    link:[]
+  }
 ];

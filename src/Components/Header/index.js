@@ -7,7 +7,7 @@ import icon from "./../../Images/icon.png";
 import { Title, SimpleInfo } from "./data";
 import { useGlobalContext } from "../../context";
 const Header = () => {
-  const { isEnglish } = useGlobalContext();
+  const { isEnglish,closeSubMenu } = useGlobalContext();
   const [title, setTitle] = useState("");
   const [Intro, setIntro] = useState("");
 
@@ -33,7 +33,7 @@ const Header = () => {
     }
   }, [isEnglish]);
   return (
-    <Background>
+    <Background onMouseOver={closeSubMenu}>
       <Container fluid>
         <Row>
           <Col>

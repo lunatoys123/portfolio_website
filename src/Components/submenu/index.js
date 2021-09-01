@@ -1,11 +1,22 @@
-import React from 'react'
-import { SubMenuPanel } from './submenu.style'
+import React, { useEffect, useRef } from "react";
+import { SubMenuPanel } from "./submenu.style";
+import { useGlobalContext } from "../../context";
 const Submenu = () => {
-    return (
-        <SubMenuPanel>
-            hello
-        </SubMenuPanel>
-    )
-}
+  const {
+    page: {  name, link },
+    location,
+    isSubMenuOpen
+  } = useGlobalContext();
+  const container = useRef(null);
 
-export default Submenu
+  useEffect(() => {
+      const submenu = container.current;
+      const {center, bottom} = location;
+      submenu.style.left = `${center}px`;
+      submenu.style.top = `${bottom}px`;
+  }, [name, link, location]);
+
+  return <SubMenuPanel ref={container} subMenuOpen={isSubMenuOpen} >hello</SubMenuPanel>;
+};
+
+export default Submenu;
