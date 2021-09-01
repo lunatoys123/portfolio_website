@@ -5,13 +5,11 @@ import Content from "./Components/MainContent";
 import Footer from "./Components/Footer";
 import { GlobalStyle } from "./GlobalStyle";
 function App() {
-
-  const [isEnglish , setIsEnglish] = useState(true);
   return (
     <>
       <GlobalStyle />
-      <Navbar callBack={setIsEnglish} English={isEnglish} />
-      <Header English ={isEnglish}/>
+      <Navbar />
+      <Header/>
       <Content />
       <Footer />
     </>

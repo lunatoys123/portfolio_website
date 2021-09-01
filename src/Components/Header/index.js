@@ -5,28 +5,7 @@ import Col from "react-bootstrap/Col";
 import { Background, CenterElement, Logo } from "./Header.style";
 import icon from "./../../Images/icon.png";
 import { Title, SimpleInfo } from "./data";
-const Header = ({ English }) => {
-  const [title, setTitle] = useState(
-    Title.find((t) => t.language === "English")["name"]
-  );
-  const [Intro, setIntro] = useState(
-    SimpleInfo.find((t) => t.language === "English")["Info"]
-  );
-  useEffect(() => {
-    if (English) {
-      const { name } = Title.find((t) => t.language === "English");
-      const { Info } = SimpleInfo.find((t) => t.language === "English");
-
-      setTitle(name);
-      setIntro(Info);
-    } else {
-      const { name } = Title.find((t) => t.language === "chinese");
-      const { Info } = SimpleInfo.find((t) => t.language ==='chinese');
-
-      setTitle(name);
-      setIntro(Info);
-    }
-  }, [English]);
+const Header = () => {
   return (
     <Background>
       <Container fluid>
@@ -40,14 +19,19 @@ const Header = ({ English }) => {
         <Row>
           <Col>
             <CenterElement>
-              <h2>{title}</h2>
+              <h2>Lau Kin Tung</h2>
             </CenterElement>
           </Col>
         </Row>
         <Row>
           <Col>
             <CenterElement>
-              <p align='center'>{Intro}</p>
+              <p align="center">
+                I’m a year 3 student in HKBU, studying on computer science.
+                Experience in JAVA, html, javascript.Curently working at Audit
+                Commission as one year placement. Hope to be a software engineer
+                in the future
+              </p>
             </CenterElement>
           </Col>
         </Row>
