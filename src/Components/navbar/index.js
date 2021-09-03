@@ -35,7 +35,7 @@ const Header = () => {
         <Navbar.Brand onMouseOver={closeSubMenu}>Lau Kin Tung Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto" onMouseLeave={closeSubMenu}>
             {linkname.map((item, index) => {
               return (
                 <Nav.Link key={index} onMouseOver={displaySubMenu}>

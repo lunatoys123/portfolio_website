@@ -3,20 +3,26 @@ import { SubMenuPanel } from "./submenu.style";
 import { useGlobalContext } from "../../context";
 const Submenu = () => {
   const {
-    page: {  name, link },
+    page: { name, link },
     location,
-    isSubMenuOpen
+    isSubMenuOpen,
   } = useGlobalContext();
   const container = useRef(null);
 
   useEffect(() => {
-      const submenu = container.current;
-      const {center, bottom} = location;
-      submenu.style.left = `${center}px`;
-      submenu.style.top = `${bottom}px`;
+    const submenu = container.current;
+    const { center, bottom } = location;
+    submenu.style.left = `${center}px`;
+    submenu.style.top = `${bottom}px`;
   }, [name, link, location]);
 
-  return <SubMenuPanel ref={container} subMenuOpen={isSubMenuOpen} >hello</SubMenuPanel>;
+  return (
+    <SubMenuPanel ref={container} subMenuOpen={isSubMenuOpen}>
+      {link.map((item, index) => {
+        return <div key={index}>{item}</div>;
+      })}
+    </SubMenuPanel>
+  );
 };
 
 export default Submenu;
