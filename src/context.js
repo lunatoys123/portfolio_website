@@ -14,6 +14,7 @@ const AppProvider = ({ children }) => {
   const setChinese = () => {
     setIsEnglish(false);
   };
+  
 
   const openSubMenu = (text, coordinate) => {
     if (isEnglish) {

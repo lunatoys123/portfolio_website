@@ -2,12 +2,10 @@ import React from "react";
 import {
   Wrapper,
   CopyRight,
-  Title,
   SiteMap,
   Follow,
-  FollowLayout,
 } from "./Footer.style";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import {
   AiFillFacebook,
   AiFillGithub,

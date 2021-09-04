@@ -24,7 +24,7 @@ export const SubMenuPanel = styled.aside`
   }
 `;
 
-export const Col_2 = styled.div`
+export const Col2 = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 

@@ -1,21 +1,17 @@
 import React from "react";
-import Navbar from "./Components/navbar";
-import Header from "./Components/Header";
-import Content from "./Components/MainContent";
-import Footer from "./Components/Footer";
-import Submenu from "./Components/submenu";
+import Home from './Components/Home'
+import Year from "./Components/Learning/Year"
 import { GlobalStyle } from "./GlobalStyle";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <>
       <Router>
         <GlobalStyle />
-        <Navbar />
-        <Header />
-        <Route path='/'><Content /></Route>
-        <Footer />
-        <Submenu />
+        <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/Learning/:year" component={Year} />
+        </Switch>
       </Router>
     </>
   );

@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { Nav } from "react-bootstrap";
 import { links } from "./data";
 import { useGlobalContext } from "../../context";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+
 const Header = () => {
   const { isEnglish, setEnglish, setChinese, openSubMenu, closeSubMenu } =
     useGlobalContext();
@@ -23,11 +23,13 @@ const Header = () => {
       let EnglishTitle = links.filter((L) => L.language === "English");
       EnglishTitle.map((item) => {
         setLinkname((name) => [...name, item.name]);
+        return null;
       });
     } else {
       let ChineseTitle = links.filter((L) => L.language === "chinese");
       ChineseTitle.map((item) => {
         setLinkname((name) => [...name, item.name]);
+        return null;
       });
     }
   }, [isEnglish]);
