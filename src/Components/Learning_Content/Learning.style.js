@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const ToggleLayout = styled.div`
+  display: block;
+  align-items: left;
+  justify-content: left;
+`;
 export const Toggle = styled.button`
   left: 5rem;
   top: 2rem;
@@ -11,22 +16,20 @@ export const Toggle = styled.button`
 `;
 
 export const Sidebar = styled.div`
-  ul{
+  ul {
     list-style-type: none;
   }
 
-  ul li{
-    height : 50px;
-    text-align: center;
+  ul li {
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s linear;
+    font-size: 24px;
 
-    &:hover{
+    &:hover {
       background: var(--clr-grey-10);
     }
   }
-
-  
 `;
