@@ -1,6 +1,6 @@
 import React from "react";
 import Home from './Components/Home'
-import Year from "./Components/Learning/Year"
+import Year from "./Components/Learning_Content/Year"
 import { GlobalStyle } from "./GlobalStyle";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
