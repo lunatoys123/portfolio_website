@@ -5,15 +5,18 @@ import Content from "./Components/MainContent";
 import Footer from "./Components/Footer";
 import Submenu from "./Components/submenu";
 import { GlobalStyle } from "./GlobalStyle";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <GlobalStyle />
-      <Navbar />
-      <Header/>
-      <Content />
-      <Footer />
-      <Submenu />
+      <Router>
+        <GlobalStyle />
+        <Navbar />
+        <Header />
+        <Route path='/'><Content /></Route>
+        <Footer />
+        <Submenu />
+      </Router>
     </>
   );
 }

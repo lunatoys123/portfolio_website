@@ -9,7 +9,7 @@ export const CenterElement = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  transition: all 0.3s linear;
   padding: 20px 0px;
 
   h2 {

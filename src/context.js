@@ -21,9 +21,14 @@ const AppProvider = ({ children }) => {
         (L) => L.language === "English" && L.name === text
       );
       setPage(page);
-      setLocation(coordinate);
-      setIsSubMenuOpen(true);
+    } else {
+      const page = links.find(
+        (L) => L.language === "chinese" && L.name === text
+      );
+      setPage(page);
     }
+    setLocation(coordinate);
+    setIsSubMenuOpen(true);
   };
 
   const closeSubMenu = () => {
