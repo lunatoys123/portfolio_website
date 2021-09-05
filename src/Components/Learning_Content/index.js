@@ -9,11 +9,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Year from "./Year";
 import { AiFillBook } from "react-icons/ai";
+import Background from '../../Images/Learning.png'
 const Learning = () => {
   const [show, setShow] = useState(false);
   const { isEnglish, closeSubMenu } = useGlobalContext();
   const [link, setLink] = useState([]);
-  const [selectedYear, setSelectedYear] = useState(1);
+  
   useEffect(() => {
     const sublink = links.find(
       (sub) => sub.language === "English" && sub.name === "Learning"
@@ -26,7 +27,7 @@ const Learning = () => {
     <>
       <Container fluid>
         <Row>
-          <ToggleLayout>
+          <ToggleLayout Background={Background} onMouseOver={closeSubMenu}>
             <Toggle onClick={() => setShow(true)}>
               <FaBars />
             </Toggle>

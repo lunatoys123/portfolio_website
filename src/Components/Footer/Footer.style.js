@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   color: white;
   height: 100%;
   filter: drop-shadow(2px -2px 2px black);
+  
 `;
 
 export const CopyRight = styled.div`

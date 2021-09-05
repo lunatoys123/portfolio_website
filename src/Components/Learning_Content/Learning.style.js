@@ -4,6 +4,12 @@ export const ToggleLayout = styled.div`
   display: block;
   align-items: left;
   justify-content: left;
+  background: url(${(props) => props.Background});
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  
 `;
 export const Toggle = styled.button`
   left: 5rem;
