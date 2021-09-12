@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const BackGroundLayout = styled.div`
-  width: 1280px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin: 50px 0px;
+  min-height:500px;
+  height: 100%;
 `;
 
 export const ImgHolder = styled.div`
@@ -14,7 +16,7 @@ export const ImgHolder = styled.div`
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.5);
+    transform: scale(1.3);
   }
 `;
 
@@ -28,6 +30,7 @@ export const TableLayout = styled.div`
   display: "block";
   border: 1px solid #e0e0d1;
   transition: all 1s linear;
+
   Table {
     width: 80%;
     margin-left: auto;
@@ -43,11 +46,13 @@ export const TabLayout = styled.div`
   display: flex;
   height: auto;
   background-color: #ecc6d9;
-  padding: 20px 20px;
-
   h3 {
     color: white;
     font-family: "Noto Sans TC", sans-serif;
     font-weight: bold;
   }
+`;
+
+export const ColLayout = styled.div`
+  margin: 20px 0px;
 `;

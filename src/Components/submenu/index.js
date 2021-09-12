@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { SubMenuPanel, Col2 } from "./submenu.style";
 import { useGlobalContext } from "../../context";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const Submenu = () => {
   const {
@@ -23,7 +23,7 @@ const Submenu = () => {
       <h4>{name}</h4>
       <Col2>
         {link.map((item, index) => {
-          return <a key={index}>{item}</a>;
+          return <Link key={index} to={`/Learning/${item}`}>{item}</Link>;
         })}
       </Col2>
     </SubMenuPanel>

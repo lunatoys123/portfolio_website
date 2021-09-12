@@ -52,7 +52,7 @@ const Learning = () => {
             </Offcanvas.Body>
           </Offcanvas>
         </Row>
-        <Row><Year /></Row>
+        <Row><Col align="center"><Year /></Col></Row>
       </Container>
     </>
   );
