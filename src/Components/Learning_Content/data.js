@@ -132,14 +132,55 @@ export const LearningDetails = [
         CourseTitle: "Computer Organization",
         Grade: "S",
         Description:
-          "Introduce the orgainization of digital Computer including how arithmetic and "+
+          "Introduce the orgainization of digital Computer including how arithmetic and " +
           "logical operations are presented by computer and Evaluate the performance of CPU, Memory and IO/Operation ",
       },
       {
         CourseTitle: "Problem Solving Using Object Oriented Programming",
-        Grade:"DT",
-        Description: "Introduction of Java Object-Oriented Programming Basic and advance Concept including "+
-        "",
+        Grade: "DT",
+        Description:
+          "Introduction of Java Object-Oriented Programming Basic and advance Concept including " +
+          "methods, classes, Objects, inheritance and polymorphism",
+      },
+      {
+        CourseTitle: "History, Memory and Justices",
+        Grade: "C-",
+        Description: "N/A",
+      },
+      {
+        CourseTitle: "Discreate Mathematics",
+        Grade: "S",
+        Description: "N/A",
+      },
+      {
+        CourseTitle: "The Art of Persuasion",
+        Grade: "C",
+        Description: "N/A",
+      },
+    ],
+  },
+  {
+    key: "Year 3",
+    Title: "Year 3 Academic Result",
+    course: [
+      {
+        CourseTitle: "	Design and Analysis of Algorithms",
+        Grade: "B",
+        Description:
+          "Introduce the topics of algorithms and analyze their efficiency and memory needs. This Lecture will include" +
+          "divide-and-conquer strategy, dynamic Programming, graph algorithm, sorting algorithm",
+      },
+      {
+        CourseTitle: "	Data Communication and Networking",
+        Grade: "A-",
+        Description:
+          "Understanding network componenets and architecutres, computer communication at physical layer " +
+          "data link layer and network layer and using socket programming to develope client-server applications",
+      },
+      {
+        CourseTitle: "Software Engineering",
+        Grade: "B",
+        Description:""
       }
     ],
   },
