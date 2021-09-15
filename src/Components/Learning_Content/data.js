@@ -180,7 +180,20 @@ export const LearningDetails = [
       {
         CourseTitle: "Software Engineering",
         Grade: "B",
-        Description:""
+        Description:
+          "Introduces the methodology of organization, planning and management of software development, Require students to develope test plan, requirement analysis ,design software specification. " +
+          "Also, develop web and mobile Programming skill using Html and javascript",
+      },
+      {
+        CourseTitle: "Happiness: East and West",
+        Grade: "B",
+        Description: "N/A"
+      },
+      {
+        CourseTitle: "Applied Linear Algebra for Computing",
+        Grade:'B-',
+        Description: "Studies linear algebra topics such as vectors, matrics, linear equations, eigenvalues ,eigenvectors, matrix factorizations, singular value decomposition "+
+        "optimization problems, curve fitting"
       }
     ],
   },
