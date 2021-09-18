@@ -180,25 +180,42 @@ export const LearningDetails = [
       {
         CourseTitle: "Software Engineering",
         Grade: "B",
-        Description:"Introduce the methodology of software development as well as organization, planning and Management"+
-        "including develop requirement analysis, user requirement, testing plan and develop web and mobile application"
+        Description:
+          "Introduce the methodology of software development as well as organization, planning and Management" +
+          "including develop requirement analysis, user requirement, testing plan and develop web and mobile application",
       },
       {
         CourseTitle: "Happiness: East and West",
-        Grade:"B",
-        Description:"N/A"
+        Grade: "B",
+        Description: "N/A",
       },
       {
         CourseTitle: "Applied Linear Algebra for Computing",
         Grade: "B-",
-        Description:"Studies linear algebra such as vectors, matrices, linear equations, eigenvalues, eigenvectors, matrix factorizations "+
-        "singular value decomposition, optimization problems, curve fitting"
+        Description:
+          "Studies linear algebra such as vectors, matrices, linear equations, eigenvalues, eigenvectors, matrix factorizations " +
+          "singular value decomposition, optimization problems, curve fitting",
       },
       {
         CourseTitle: "Data Mining and knowledge Discovery",
-        Grade:"B+", 
-        Description:""
-      }
+        Grade: "B+",
+        Description:
+          "Introduce the knowledgy discovery of data mining and the common data mining techiques including " +
+          "statistical methods, machine learning, and efficient algorithms. In addition, advanced topic such as graph mining and social network analysis",
+      },
+      {
+        CourseTitle: "Distributed and Cloud Computing",
+        Grade: "B",
+        Description:
+          "Examine techiques underlying the design and engineering of distributed System and cloud computing system, " +
+          "topics include distributed system model, computer clusters, virtualization, data centers",
+      },
+      {
+        CourseTitle: "Software Design, Development and Testing",
+        Grade: "C+",
+        Description:
+          "Develope students knowledge and skill in software engineering and introduce software engineering design pattern and advanced topics in developing reliable software systems",
+      },
     ],
   },
 ];
