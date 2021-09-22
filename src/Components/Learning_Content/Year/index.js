@@ -1,17 +1,23 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import { useGlobalContext } from "../../../context";
 import { BackGroundLayout } from "./Year.style";
 import Tabs from "./Tabs";
 import { GPAForHKBU, LearningDetails } from "../data";
 import { useParams } from "react-router";
-const Year1 = () => {
+const Year = () => {
   const { closeSubMenu } = useGlobalContext();
+  const [MainTitle, setMainTitle] = useState('');
   const {year} = useParams();
 
-  console.log(year);
+  useEffect(() => {
+    const{MainTitle}=LearningDetails.find((Learn)=>Learn.key===year);
+    setMainTitle(MainTitle);
+  },[year])
+
+
   return (
     <BackGroundLayout onMouseOver={closeSubMenu}>
-      <h1>{year}</h1>
+      <h1>{MainTitle}</h1>
 
       <Tabs data={GPAForHKBU} Format={1}/>
       <Tabs data={LearningDetails} Format={2} year={year}/>
@@ -19,4 +25,4 @@ const Year1 = () => {
   );
 };
 
-export default Year1;
+export default Year;

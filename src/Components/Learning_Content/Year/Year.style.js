@@ -7,6 +7,7 @@ export const BackGroundLayout = styled.div`
   margin: 50px 0px;
   min-height:500px;
   height: 100%;
+  max-width: 1280px;
 `;
 
 export const ImgHolder = styled.div`

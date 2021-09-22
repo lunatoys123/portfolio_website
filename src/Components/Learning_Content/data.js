@@ -58,7 +58,8 @@ export const GPAForHKBU = {
 
 export const LearningDetails = [
   {
-    key: "Year 1",
+    key: "Year1",
+    MainTitle:'Year 1',
     Title: "Year 1 Academic Result",
     course: [
       {
@@ -119,7 +120,8 @@ export const LearningDetails = [
     ],
   },
   {
-    key: "Year 2",
+    key: "Year2",
+    MainTitle:'Year 2',
     Title: "Year 2 Academic Result",
     course: [
       {
@@ -160,7 +162,8 @@ export const LearningDetails = [
     ],
   },
   {
-    key: "Year 3",
+    key: "Year3",
+    MainTitle:'Year 3',
     Title: "Year 3 Academic Result",
     course: [
       {

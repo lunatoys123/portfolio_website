@@ -10,6 +10,7 @@ import Col from "react-bootstrap/Col";
 import Year from "./Year";
 import { AiFillBook } from "react-icons/ai";
 import Background from '../../Images/Learning.png'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 const Learning = () => {
   const [show, setShow] = useState(false);
   const { closeSubMenu } = useGlobalContext();
@@ -32,7 +33,7 @@ const Learning = () => {
               <FaBars />
             </Toggle>
           </ToggleLayout>
-          <Offcanvas show={show} onHide={() => setShow(false)}>
+          <Offcanvas show={show} onHide={() => setShow(false)} scroll={false} backdrop={false}>
             <Offcanvas.Header closeButton>
               <Offcanvas.Title>Learning</Offcanvas.Title>
             </Offcanvas.Header>
@@ -43,7 +44,7 @@ const Learning = () => {
                     return (
                       <li key={index}>
                         <AiFillBook />
-                        {item}
+                        <Link to={ `/Learning/${item}`}>{item}</Link>
                       </li>
                     );
                   })}
