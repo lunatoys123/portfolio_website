@@ -3,31 +3,18 @@ import { links } from "./Components/navbar/data";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [isEnglish, setIsEnglish] = useState(true);
   const [location, setLocation] = useState({});
   const [page, setPage] = useState({ name: "", link: [] });
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-  const setEnglish = () => {
-    setIsEnglish(true);
-  };
 
-  const setChinese = () => {
-    setIsEnglish(false);
-  };
-  
 
   const openSubMenu = (text, coordinate) => {
-    if (isEnglish) {
-      const page = links.find(
-        (L) => L.language === "English" && L.name === text
+
+    const page = links.find(
+        (L) =>  L.name === text
       );
       setPage(page);
-    } else {
-      const page = links.find(
-        (L) => L.language === "chinese" && L.name === text
-      );
-      setPage(page);
-    }
+    
     setLocation(coordinate);
     setIsSubMenuOpen(true);
   };
@@ -38,9 +25,6 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
-        isEnglish,
-        setEnglish,
-        setChinese,
         openSubMenu,
         closeSubMenu,
         page,

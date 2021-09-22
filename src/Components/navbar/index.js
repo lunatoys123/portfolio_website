@@ -6,7 +6,7 @@ import { links } from "./data";
 import { useGlobalContext } from "../../context";
 
 const Header = () => {
-  const { isEnglish, setEnglish, setChinese, openSubMenu, closeSubMenu } =
+  const { openSubMenu, closeSubMenu } =
     useGlobalContext();
   const [linkname, setLinkname] = useState([]);
   const displaySubMenu = (e) => {
@@ -19,7 +19,7 @@ const Header = () => {
 
   useEffect(() => {
     setLinkname([]);
-    if (isEnglish) {
+    /*if (isEnglish) {
       let EnglishTitle = links.filter((L) => L.language === "English");
       EnglishTitle.map((item) => {
         setLinkname((name) => [...name, item.name]);
@@ -31,8 +31,11 @@ const Header = () => {
         setLinkname((name) => [...name, item.name]);
         return null;
       });
-    }
-  }, [isEnglish]);
+    }*/
+    links.map((item) => {
+      setLinkname((name) => [...name, item.name]);
+    })
+  }, []);
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -50,10 +53,6 @@ const Header = () => {
                 );
               })}
               <Nav.Link onMouseOver={closeSubMenu}></Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link onClick={setChinese}>chinese</Nav.Link>
-            <Nav.Link onClick={setEnglish}>English</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
