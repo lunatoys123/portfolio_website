@@ -12,16 +12,16 @@ import { AiFillBook } from "react-icons/ai";
 import Background from '../../Images/Learning.png'
 const Learning = () => {
   const [show, setShow] = useState(false);
-  const { isEnglish, closeSubMenu } = useGlobalContext();
+  const { closeSubMenu } = useGlobalContext();
   const [link, setLink] = useState([]);
   
   useEffect(() => {
     const sublink = links.find(
-      (sub) => sub.language === "English" && sub.name === "Learning"
+      (sub) => sub.name === "Learning"
     );
     const { link } = sublink;
     setLink(link);
-  }, [isEnglish]);
+  }, []);
 
   return (
     <>
