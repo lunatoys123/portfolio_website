@@ -19,19 +19,6 @@ const Header = () => {
 
   useEffect(() => {
     setLinkname([]);
-    /*if (isEnglish) {
-      let EnglishTitle = links.filter((L) => L.language === "English");
-      EnglishTitle.map((item) => {
-        setLinkname((name) => [...name, item.name]);
-        return null;
-      });
-    } else {
-      let ChineseTitle = links.filter((L) => L.language === "chinese");
-      ChineseTitle.map((item) => {
-        setLinkname((name) => [...name, item.name]);
-        return null;
-      });
-    }*/
     links.map((item) => {
       setLinkname((name) => [...name, item.name]);
     })

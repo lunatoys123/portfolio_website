@@ -5,7 +5,7 @@ export const links = [
   },
   {
     name: "Learning",
-    link: ["Year 1", "Year 2", "Year 3", "Year 4"],
+    link: ["Year1", "Year2", "Year3", "Year4"],
   },
   {
     name: "Work Projects",
