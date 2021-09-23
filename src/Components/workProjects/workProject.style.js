@@ -6,5 +6,6 @@ export const BackGroundLayout = styled.div`
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    padding-top:20px
+    padding-top:20px;
+
 `;
