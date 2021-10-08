@@ -14,7 +14,7 @@ const WorkProject = () => {
         {ProjectData.map((item, idx) => {
           const { ImageUrl, Title, Description } = item;
           return (
-            <Col>
+            <Col key={idx}>
               <Card>
                 <Card.Img variant="top" src={ImageUrl} />
                 <Card.Body>
