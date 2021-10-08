@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import webIcon from "../../Images/sails_Project.png";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { BackGroundLayout } from "./workProject.style";

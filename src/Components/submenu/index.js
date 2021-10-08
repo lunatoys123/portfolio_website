@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { SubMenuPanel, Col2 } from "./submenu.style";
 import { useGlobalContext } from "../../context";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Submenu = () => {
   const {

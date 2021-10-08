@@ -1,9 +1,9 @@
-import React from "react";
-import Navbar from "./navbar";
-import Header from "./Header";
-import Content from "./MainContent";
-import Footer from "./Footer";
-import Submenu from "./submenu";
+import React, { lazy } from "react";
+const Navbar = lazy(() => import("./navbar"));
+const Header = lazy(() => import("./Header"));
+const Content = lazy(() => import("./MainContent"));
+const Footer = lazy(() => import("./Footer"));
+const Submenu = lazy(() => import("./submenu"));
 const Home = () => {
   return (
     <>

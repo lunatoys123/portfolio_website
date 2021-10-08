@@ -1,8 +1,9 @@
-import React from 'react'
-import LearningContent from './Learning_Content'
-import Navbar from './navbar';
-import Submenu from './submenu'
-import Footer from './Footer'
+import React, {lazy} from 'react'
+
+const LearningContent = lazy(()=>import('./Learning_Content'));
+const Navbar = lazy(()=>import('./navbar'));
+const Submenu = lazy(()=>import('./submenu'));
+const Footer = lazy(()=>import('./Footer'));
 
 const Learning = () => {
     return (
