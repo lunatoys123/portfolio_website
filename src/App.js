@@ -1,19 +1,22 @@
-import React from "react";
-import Home from './Components/Home'
-import Learning from './Components/Learning'
+import React, { lazy, Suspense } from "react";
 import { GlobalStyle } from "./GlobalStyle";
-import Project from "./Components/workProject"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+const Home = lazy(() => import("./Components/Home"));
+const Learning = lazy(() => import("./Components/Learning"));
+const Project = lazy(() => import("./Components/workProject"));
 function App() {
   return (
     <>
       <Router>
-        <GlobalStyle />
-        <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/Learning/:year" component={Learning} />
-        <Route exact path="/workProject" component={Project} />
-        </Switch>
+        <Suspense fallback={<p>Loading</p>}>
+          <GlobalStyle />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/Learning/:year" component={Learning} />
+            <Route exact path="/workProject" component={Project} />
+          </Switch>
+        </Suspense>
       </Router>
     </>
   );
