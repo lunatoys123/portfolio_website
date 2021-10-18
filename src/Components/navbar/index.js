@@ -18,7 +18,10 @@ const Header = () => {
   useEffect(() => {
     setLinkname([]);
     links.map((item) => {
-      setLinkname((name) => [...name, {name: item.name, urlname: item.urlname}]);
+      return setLinkname((name) => [
+        ...name,
+        { name: item.name, urlname: item.urlname },
+      ]);
     });
   }, []);
   return (
@@ -31,9 +34,14 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             {linkname.map((item, index) => {
-              const {name, urlname} = item;
+              const { name, urlname } = item;
               return (
-                <Nav.Link key={index} onMouseOver={displaySubMenu}  style={{height: '100%'}} href={`/${urlname}`}>
+                <Nav.Link
+                  key={index}
+                  onMouseOver={displaySubMenu}
+                  style={{ height: "100%" }}
+                  href={`/${urlname}`}
+                >
                   {name}
                 </Nav.Link>
               );

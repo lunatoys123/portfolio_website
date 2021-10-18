@@ -13,6 +13,7 @@ const Tabs = ({ data, Format, year }) => {
   const [TableHeader, setHeader] = useState([]);
   const [TableContent, setTableContent] = useState([]);
   const [TableCourse, setTableCourse] = useState([]);
+
   const handleGPA = () => {
     setOpen(!open);
   };

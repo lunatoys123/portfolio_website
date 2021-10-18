@@ -23,7 +23,9 @@ const Submenu = () => {
       <h4>{name}</h4>
       <Col2>
         {link.map((item, index) => {
-          return <Link key={index} to={`/Learning/${item}`}>{item}</Link>;
+          if(name==='Learning'){
+            return <Link key={index} to={`/Learning/${item}`}>{item}</Link>;
+          }
         })}
       </Col2>
     </SubMenuPanel>

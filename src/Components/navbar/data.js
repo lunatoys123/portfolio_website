@@ -7,7 +7,7 @@ export const links = [
   {
     name: "Learning",
     urlname: "Learning",
-    link: ["Year1", "Year2", "Year3", "Year4"],
+    link: ["Year1", "Year2", "Year3"],
   },
   {
     name: "Work Projects",
