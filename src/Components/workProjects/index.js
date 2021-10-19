@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { BackGroundLayout } from "./workProject.style";
+import { BackGroundLayout, Shadow } from "./workProject.style";
 import { ProjectData } from "./data";
 import { useGlobalContext } from "../../context";
 const WorkProject = () => {
@@ -15,14 +15,16 @@ const WorkProject = () => {
           const { ImageUrl, Title, Description } = item;
           return (
             <Col key={idx}>
-              <Card>
-                <Card.Img variant="top" src={ImageUrl} />
-                <Card.Body>
-                  <Card.Title>{Title}</Card.Title>
-                  <Card.Text>{Description}</Card.Text>
-                  <Button>Go to this project</Button>
-                </Card.Body>
-              </Card>
+              <Shadow>
+                <Card>
+                  <Card.Img variant="top" src={ImageUrl} />
+                  <Card.Body>
+                    <Card.Title>{Title}</Card.Title>
+                    <Card.Text>{Description}</Card.Text>
+                    <Button>Go to this project</Button>
+                  </Card.Body>
+                </Card>
+              </Shadow>
             </Col>
           );
         })}

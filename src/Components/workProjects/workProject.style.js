@@ -7,5 +7,8 @@ export const BackGroundLayout = styled.div`
     margin-left: auto;
     margin-right: auto;
     padding-top:20px;
-
 `;
+
+export const Shadow = styled.div`
+    filter: drop-shadow(3px 3px 3px black);
+`

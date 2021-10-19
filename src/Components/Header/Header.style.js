@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Background = styled.div`
   background-color: #c4c4c4;
-  filter: drop-shadow(2px 2px 2px black);
+  filter: -shadow(2px 2px 2px black);
 `;
 
 export const CenterElement = styled.div`
