@@ -11,4 +11,8 @@ export const BackGroundLayout = styled.div`
 
 export const Shadow = styled.div`
     filter: drop-shadow(3px 3px 3px black);
+    transition: all 0.3s linear;
+    :hover{
+        transform: scale(1.05);
+    }
 `
