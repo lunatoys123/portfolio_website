@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import { BackGroundLayout, Shadow } from "./workProject.style";
 import { ProjectData } from "./data";
 import { useGlobalContext } from "../../context";
+import { Link } from "react-router-dom";
 const WorkProject = () => {
   const { closeSubMenu } = useGlobalContext();
   return (
@@ -21,7 +22,7 @@ const WorkProject = () => {
                   <Card.Body>
                     <Card.Title>{Title}</Card.Title>
                     <Card.Text>{Description}</Card.Text>
-                    <Button>Go to this project</Button>
+                    <Link to={{pathname:`WorkProject/${Title}`, state: ProjectData}}>Go to this project</Link>
                   </Card.Body>
                 </Card>
               </Shadow>

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 const Home = lazy(() => import("./Components/Home"));
 const Learning = lazy(() => import("./Components/Learning"));
 const Project = lazy(() => import("./Components/workProject"));
+const indvidualProject = lazy(() => import("./Components/workProjects/indvidualProject"));
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/Learning/:year" component={Learning} />
             <Route exact path="/workProject" component={Project} />
+            <Route exact path="/workProject/:title" component={indvidualProject} />
             <Redirect from={"/Learning"} to={`/Learning/Year1`}/>
           </Switch>
         </Suspense>
