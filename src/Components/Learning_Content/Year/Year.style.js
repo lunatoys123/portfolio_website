@@ -5,8 +5,7 @@ export const BackGroundLayout = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin: 50px 0px;
-  min-height:500px;
-  height: 100%;
+  min-height:100vh;
   max-width: 1280px;
 `;
 

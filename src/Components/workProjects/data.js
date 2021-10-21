@@ -15,7 +15,7 @@ export const ProjectData = [
   },
   {
     ImageUrl: App,
-    Title: "Audit Commission Inventory",
+    Title: "Audit Commission Inventory App",
     Description: "create Inventory System to keep track of users electronic equipment using Mysql(Database), php (backend), html, vue.js as front end",
   },
 ];

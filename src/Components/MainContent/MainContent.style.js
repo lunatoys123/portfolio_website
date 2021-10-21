@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   filter: drop-shadow(3px 3px 3px black);
   color: white;
   font-family: "Noto Sans TC", sans-serif;
+  min-height: 100vh;
 `;
 
 export const Image = styled.img`
@@ -22,5 +23,3 @@ export const Center = styled.div`
   margin-left: auto;
   margin-right: auto;
 `;
-
-
