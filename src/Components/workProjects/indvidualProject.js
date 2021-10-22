@@ -4,9 +4,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useLocation, useParams } from "react-router-dom";
 import graph from "../../Images/comp3047-web-diagram.png";
-import QPonMain from "../../Images/QPon_main.png";
-import QPonSearch from "../../Images/QPon_Search.png";
-import QPOnMainMember from "../../Images/QPon_Main_member.png";
+import QPonMain from "../../Images/Qpon/QPon_main.png";
+import QPonSearch from "../../Images/Qpon/QPon_Search.png";
+import QPOnMainMember from "../../Images/Qpon/QPon_Main_member.png";
+import QPonMainAdmin from "../../Images/Qpon/QPon_Main_admin.png";
+import QPonCreate from "../../Images/Qpon/QPon_create.png";
 import Image from "react-bootstrap/Image";
 import Table from "react-bootstrap/Table";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -238,6 +240,16 @@ const IndvidualProject = () => {
                                     }}
                                   />
                                 </Col>
+                                <Col>
+                                  <Image
+                                    src={QPonMainAdmin}
+                                    style={{
+                                      width: "100%",
+                                      height: "100%",
+                                      border: "1px solid black",
+                                    }}
+                                  />
+                                </Col>
                               </Row>
                             </td>
                             <td>
@@ -249,24 +261,80 @@ const IndvidualProject = () => {
                                   coupon.
                                 </ListGroup.Item>
                                 <ListGroup.Item>
-                                  The Top navbar provide functions according to
-                                  user authority. If user is a user, only search
-                                  function, sign up and login function will
-                                  provide to user. If user is
+                                  <p>
+                                    The Top navbar provide functions according
+                                    to user authority.
+                                  </p>
+                                  <ul>
+                                    <li>
+                                      user can only search, sign in and sign out
+                                    </li>
+                                    <li>
+                                      member can search, sign in , sign out and
+                                      review the redeemed coupon
+                                    </li>
+                                    <li>
+                                      admin can process the function of the
+                                      user. also, admin can add, update, delete
+                                      coupon in the system
+                                    </li>
+                                  </ul>
                                 </ListGroup.Item>
                               </ListGroup>
                             </td>
                           </tr>
                           <tr>
-                            <td>
+                            <td style={{ width: "60%" }}>
                               <Row md={2}>
                                 <Col>
                                   <Image
                                     src={QPonSearch}
-                                    style={{ width: "100%", height: "100%", border:"1px solid black" }}
+                                    style={{
+                                      width: "100%",
+                                      height: "100%",
+                                      border: "1px solid black",
+                                    }}
                                   />
                                 </Col>
                               </Row>
+                            </td>
+                            <td>
+                              <ListGroup>
+                                <ListGroup.Item>
+                                  The Searching Page contains a searching form
+                                  with criteria of Region, range of coins, date.
+                                  and the searching result in card form.
+                                </ListGroup.Item>
+                                <ListGroup.Item>
+                                  The filter result will show with pagination,
+                                  each page contains 2 coupons
+                                </ListGroup.Item>
+                              </ListGroup>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style={{ width: "60%" }}>
+                              <Row md={2}>
+                                <Col>
+                                  <Image
+                                    src={QPonCreate}
+                                    style={{
+                                      width: "100%",
+                                      height: "100%",
+                                      border: "1px solid black",
+                                    }}
+                                  />
+                                </Col>
+                              </Row>
+                            </td>
+                            <td>
+                              <ListGroup>
+                                <ListGroup.Item>
+                                  If user is an admin, user can fill up all the
+                                  field on create page to add an coupon to the
+                                  system for other member to buy.
+                                </ListGroup.Item>
+                              </ListGroup>
                             </td>
                           </tr>
                         </thead>
