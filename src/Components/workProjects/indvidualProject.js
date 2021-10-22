@@ -4,9 +4,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useLocation, useParams } from "react-router-dom";
 import graph from "../../Images/comp3047-web-diagram.png";
+import QPonMain from "../../Images/QPon_main.png";
+import QPonSearch from "../../Images/QPon_Search.png";
+import QPOnMainMember from "../../Images/QPon_Main_member.png";
 import Image from "react-bootstrap/Image";
 import Table from "react-bootstrap/Table";
 import ListGroup from "react-bootstrap/ListGroup";
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
 import { ProjectData } from "./data";
 
 const Navbar = lazy(() => import("../navbar"));
@@ -75,133 +80,203 @@ const IndvidualProject = () => {
               <Row style={{ height: "1px" }}>
                 <ColoredLine color="#ffcccc" />
               </Row>
-
               <Row className="justify-content-md-center">
-                <Col
-                  sm={6}
-                  style={{
-                    alignItems: "center",
-                    display: "flex",
-                    justifyContent: "center",
-                    borderRight: "1px solid #ffcccc",
-                  }}
+                <Tabs
+                  defaultActiveKey="Component"
+                  id="uncontrolled-tab-example"
+                  className="mb-3"
                 >
-                  <Image
-                    src={graph}
-                    style={{
-                      border: "1px solid black",
-                      width: "80%",
-                    }}
-                  />
-                </Col>
-                <Col sm={6}>
-                  <Row>
-                    <h3>Introduction</h3>
-                  </Row>
-                  <Row style={{ textIndent: "50px" }}>
-                    <p>
-                      Simulate a coupon system, using sail.js to compute the
-                      front end Interface and function (sign in, search coupon,
-                      create coupon, update coupon etc) and backend
-                    </p>
-                  </Row>
-                  <Row>
-                    <h3>Component</h3>
-                  </Row>
-                  <Row>
-                    <Table striped bordered hover>
-                      <thead>
-                        <tr>
-                          <th style={{ width: "30%" }}>Component</th>
-                          <th>Details</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td style={{ width: "30%" }}>Model</td>
-                          <td>
-                            <ListGroup>
-                              <ListGroup.Item>
-                                Model use to handle the database data with the
-                                ability to create record, update record, delete
-                                record and search record
-                              </ListGroup.Item>
-                              <ListGroup.Item>
-                                User database contains user information
-                                including username, password, role, balance etc
-                              </ListGroup.Item>
-                              <ListGroup.Item>
-                                Restaurant database contains coupon information
-                                including coupon title, restaurant url,
-                                restaurant name, Restaurant Region, coupon
-                                price, restaurant mall location, restaurant
-                                details
-                              </ListGroup.Item>
-                            </ListGroup>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style={{ width: "30%" }}>Controller</td>
-                          <td>
-                            <ListGroup>
-                              <ListGroup.Item>
-                                Controller responsible for handling logic of the
-                                web app. It sends request to Model to receive
-                                data and send response to the view to display
-                                the response data.
-                              </ListGroup.Item>
-                              <ListGroup.Item>
-                                User controller responsible for handling user
-                                actions. for example, login, redeem coupon and
-                                logout
-                              </ListGroup.Item>
-                              <ListGroup.Item>
-                                Restaurant Controller responsible for handling
-                                actions when user interact with the coupon in
-                                the coupon system. for example, Create coupon,
-                                update coupon, show coupon, searching coupon,
-                                delete coupon, add coupon to user, show the
-                                users who purchase the coupon etc.
-                              </ListGroup.Item>
-                            </ListGroup>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>View</td>
-                          <td>
-                            <ListGroup>
-                              <ListGroup.Item>
-                                View use to handle to the display of the
-                                webpage, View can display the response data
-                                where Controller pass in
-                              </ListGroup.Item>
-                            </ListGroup>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </Table>
-                  </Row>
-                </Col>
-              </Row>
-              <Row>
-                <ColoredLine color="red" />
-              </Row>
-              <Row className="justify-content-md-center">
-                <h2 style={{ textAlign: "center" }}>Page Introduction</h2>
-                <Col
-                  sm={6}
-                  style={{
-                    alignItems: "center",
-                    display: "flex",
-                    justifyContent: "center",
-                    borderRight: "1px solid #ffcccc",
-                  }}
-                >
-                  Page picture
-                </Col>
-                <Col sm={6}>
-                  Page details
-                </Col>
+                  <Tab eventKey="Component" title="Component">
+                    <Row>
+                      <Col
+                        sm={6}
+                        style={{
+                          alignItems: "center",
+                          display: "flex",
+                          justifyContent: "center",
+                          borderRight: "1px solid #ffcccc",
+                        }}
+                      >
+                        <Image
+                          src={graph}
+                          style={{
+                            border: "1px solid black",
+                            width: "80%",
+                          }}
+                        />
+                      </Col>
+                      <Col sm={6}>
+                        <Row>
+                          <h3>Introduction</h3>
+                        </Row>
+                        <Row style={{ textIndent: "50px" }}>
+                          <p>
+                            Simulate a coupon system, using sail.js to compute
+                            the front end Interface and function (sign in,
+                            search coupon, create coupon, update coupon etc) and
+                            backend
+                          </p>
+                        </Row>
+                        <Row>
+                          <Table striped bordered hover>
+                            <thead>
+                              <tr>
+                                <th style={{ width: "30%" }}>Component</th>
+                                <th>Details</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td style={{ width: "30%" }}>Model</td>
+                                <td>
+                                  <ListGroup>
+                                    <ListGroup.Item>
+                                      Model use to handle the database data with
+                                      the ability to create record, update
+                                      record, delete record and search record
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
+                                      User database contains user information
+                                      including username, password, role,
+                                      balance etc
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
+                                      Restaurant database contains coupon
+                                      information including coupon title,
+                                      restaurant url, restaurant name,
+                                      Restaurant Region, coupon price,
+                                      restaurant mall location, restaurant
+                                      details
+                                    </ListGroup.Item>
+                                  </ListGroup>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style={{ width: "30%" }}>Controller</td>
+                                <td>
+                                  <ListGroup>
+                                    <ListGroup.Item>
+                                      Controller responsible for handling logic
+                                      of the web app. It sends request to Model
+                                      to receive data and send response to the
+                                      view to display the response data.
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
+                                      User controller responsible for handling
+                                      user actions. for example, login, redeem
+                                      coupon and logout
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
+                                      Restaurant Controller responsible for
+                                      handling actions when user interact with
+                                      the coupon in the coupon system. for
+                                      example, Create coupon, update coupon,
+                                      show coupon, searching coupon, delete
+                                      coupon, add coupon to user, show the users
+                                      who purchase the coupon etc.
+                                    </ListGroup.Item>
+                                  </ListGroup>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>View</td>
+                                <td>
+                                  <ListGroup>
+                                    <ListGroup.Item>
+                                      View use to handle to the display of the
+                                      webpage, View can display the response
+                                      data where Controller pass in
+                                    </ListGroup.Item>
+                                  </ListGroup>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </Table>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </Tab>
+                  <Tab eventKey="Page" title="Page Introduction">
+                    <Row className="justify-content-md-center">
+                      <h2 style={{ textAlign: "center" }}>Page Introduction</h2>
+                      <Table striped bordered hover style={{ width: "90%" }}>
+                        <thead>
+                          <tr>
+                            <th style={{ width: "60%" }}>page</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td style={{ width: "60%" }}>
+                              <Row md={2}>
+                                <Col>
+                                  <Image
+                                    src={QPonMain}
+                                    style={{
+                                      width: "100%",
+                                      height: "100%",
+                                      border: "1px solid black",
+                                    }}
+                                  />
+                                </Col>
+                                <Col>
+                                  <Image
+                                    src={QPOnMainMember}
+                                    style={{
+                                      width: "100%",
+                                      height: "100%",
+                                      border: "1px solid black",
+                                    }}
+                                  />
+                                </Col>
+                                <Col>
+                                  <Image
+                                    src={QPOnMainMember}
+                                    style={{
+                                      width: "100%",
+                                      height: "100%",
+                                      border: "1px solid black",
+                                    }}
+                                  />
+                                </Col>
+                              </Row>
+                            </td>
+                            <td>
+                              <ListGroup>
+                                <ListGroup.Item>
+                                  This Page will display The Top two expensive
+                                  coupon on each region, click the hyper name of
+                                  the restaurant can get the details of the
+                                  coupon.
+                                </ListGroup.Item>
+                                <ListGroup.Item>
+                                  The Top navbar provide functions according to
+                                  user authority. If user is a user, only search
+                                  function, sign up and login function will
+                                  provide to user. If user is
+                                </ListGroup.Item>
+                              </ListGroup>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <Row md={2}>
+                                <Col>
+                                  <Image
+                                    src={QPonSearch}
+                                    style={{ width: "100%", height: "100%", border:"1px solid black" }}
+                                  />
+                                </Col>
+                              </Row>
+                            </td>
+                          </tr>
+                        </thead>
+                      </Table>
+                    </Row>
+                  </Tab>
+                  <Tab eventKey="contact" title="Contact">
+                    Title
+                  </Tab>
+                </Tabs>
               </Row>
             </Row>
           </Col>
