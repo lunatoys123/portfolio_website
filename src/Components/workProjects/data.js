@@ -5,17 +5,17 @@ export const ProjectData = [
   {
     ImageUrl: sailsProject,
     Title: "Comp3047 web Project",
-    Description:
+    Introduction:
       "Simulate a coupon system, using sail.js to compute the front end Interface and function (sign in, search coupon, create coupon, update coupon etc) and backend",
   },
   {
     ImageUrl: AuditCommissionProject,
     Title: "Audit Commission Inventory",
-    Description: "create Inventory System to keep track of users electronic equipment using Mysql(Database), php (backend), html, vue.js as front end",
+    Introduction: "create Inventory System to keep track of users electronic equipment using Mysql(Database), php (backend), html, vue.js as front end",
   },
   {
     ImageUrl: App,
     Title: "Audit Commission Inventory App",
-    Description: "create Inventory System to keep track of users electronic equipment using Mysql(Database), php (backend), html, vue.js as front end",
+    Introduction: "create Inventory System to keep track of users electronic equipment using Mysql(Database), php (backend), html, vue.js as front end",
   },
 ];

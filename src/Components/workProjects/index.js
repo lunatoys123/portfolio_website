@@ -12,7 +12,7 @@ const WorkProject = () => {
     <BackGroundLayout onMouseOver={closeSubMenu}>
       <Row xs="auto" md={3} className="g-4">
         {ProjectData.map((item, idx) => {
-          const { ImageUrl, Title, Description } = item;
+          const { ImageUrl, Title, Introduction } = item;
           return (
             <Col key={idx}>
               <Shadow>
@@ -20,7 +20,7 @@ const WorkProject = () => {
                   <Card.Img variant="top" src={ImageUrl} />
                   <Card.Body>
                     <Card.Title>{Title}</Card.Title>
-                    <Card.Text>{Description}</Card.Text>
+                    <Card.Text>{Introduction}</Card.Text>
                     <Link to={{pathname:`WorkProject/${Title}`, state: ProjectData}}>Go to this project</Link>
                   </Card.Body>
                 </Card>

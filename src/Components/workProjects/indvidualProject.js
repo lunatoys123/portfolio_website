@@ -9,6 +9,9 @@ import QPonSearch from "../../Images/Qpon/QPon_Search.png";
 import QPOnMainMember from "../../Images/Qpon/QPon_Main_member.png";
 import QPonMainAdmin from "../../Images/Qpon/QPon_Main_admin.png";
 import QPonCreate from "../../Images/Qpon/QPon_create.png";
+import QPonUpdate from "../../Images/Qpon/QPon_update.png";
+import QPonEdit from "../../Images/Qpon/QPon_Edit.png";
+import QPonredeemCoupon from "../../Images/Qpon/QPon_redeemcoupon.png";
 import Image from "react-bootstrap/Image";
 import Table from "react-bootstrap/Table";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -65,7 +68,7 @@ const IndvidualProject = () => {
         <Row>
           <Col
             sm={2}
-            style={{ borderRight: "1px solid #ffcccc", minHeight: "100vh" }}
+            style={{ borderRight: "1px solid #ffcccc", minHeight: "100vh", justifyContent:'center' }}
           >
             {ProjectPanelTitle.map((item, index) => {
               return <p key={index}>{item}</p>;
@@ -78,9 +81,6 @@ const IndvidualProject = () => {
                 style={{ padding: "20px" }}
               >
                 <h2 style={{ textAlign: "center" }}>{title}</h2>
-              </Row>
-              <Row style={{ height: "1px" }}>
-                <ColoredLine color="#ffcccc" />
               </Row>
               <Row className="justify-content-md-center">
                 <Tabs
@@ -325,14 +325,56 @@ const IndvidualProject = () => {
                                     }}
                                   />
                                 </Col>
+                                <Col>
+                                  <Image
+                                    src={QPonUpdate}
+                                    style={{
+                                      width: "100%",
+                                      height: "100%",
+                                      border: "1px solid black",
+                                    }}
+                                  />
+                                </Col>
+                                <Col>
+                                  <Image
+                                    src={QPonEdit}
+                                    style={{
+                                      width: "100%",
+                                      height: "100%",
+                                      border: "1px solid black",
+                                    }}
+                                  />
+                                </Col>
+                                <Col>
+                                  <Image
+                                    src={QPonredeemCoupon}
+                                    style={{
+                                      width: "100%",
+                                      height: "100%",
+                                      border: "1px solid black",
+                                    }}
+                                  />
+                                </Col>
                               </Row>
                             </td>
                             <td>
                               <ListGroup>
                                 <ListGroup.Item>
-                                  If user is an admin, user can fill up all the
+                                  If user is an admin, admin can fill up all the
                                   field on create page to add an coupon to the
                                   system for other member to buy.
+                                </ListGroup.Item>
+                                <ListGroup.Item>
+                                  Admin can update the coupon and review the
+                                  member of redeemed coupon in admin tab.
+                                </ListGroup.Item>
+                                <ListGroup.Item>
+                                  If Admin use to update a coupon, the
+                                  corresponding data will display in the
+                                  corrsponding field. admin can update the
+                                  coupon by changing the value of each field and
+                                  press "submit" button or delete the coupon by
+                                  pressing "delete" button
                                 </ListGroup.Item>
                               </ListGroup>
                             </td>
@@ -341,8 +383,8 @@ const IndvidualProject = () => {
                       </Table>
                     </Row>
                   </Tab>
-                  <Tab eventKey="contact" title="Contact">
-                    Title
+                  <Tab eventKey="Link" title="Link">
+                    Link
                   </Tab>
                 </Tabs>
               </Row>
