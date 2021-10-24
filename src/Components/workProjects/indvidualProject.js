@@ -42,18 +42,10 @@ const IndvidualProject = () => {
         return setProjectPanelTitle((ProjectTitle) => [...ProjectTitle, Title]);
       });
     }
+    const {...Component} = ProjectData.find((data)=>data.Title===title);
+    console.log(Component);
   }, [location, title]);
 
-  const ColoredLine = ({ color }) => (
-    <hr
-      style={{
-        color: color,
-        backgroundColor: "red",
-        height: 1,
-        width: "100%",
-      }}
-    />
-  );
 
   return (
     <>
@@ -108,17 +100,7 @@ const IndvidualProject = () => {
                         />
                       </Col>
                       <Col sm={6}>
-                        <Row>
-                          <h3>Introduction</h3>
-                        </Row>
-                        <Row style={{ textIndent: "50px" }}>
-                          <p>
-                            Simulate a coupon system, using sail.js to compute
-                            the front end Interface and function (sign in,
-                            search coupon, create coupon, update coupon etc) and
-                            backend
-                          </p>
-                        </Row>
+   
                         <Row>
                           <Table striped bordered hover>
                             <thead>
