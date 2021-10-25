@@ -3,15 +3,15 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useLocation, useParams } from "react-router-dom";
-import graph from "../../Images/comp3047-web-diagram.png";
-import QPonMain from "../../Images/Qpon/QPon_main.png";
-import QPonSearch from "../../Images/Qpon/QPon_Search.png";
-import QPOnMainMember from "../../Images/Qpon/QPon_Main_member.png";
-import QPonMainAdmin from "../../Images/Qpon/QPon_Main_admin.png";
-import QPonCreate from "../../Images/Qpon/QPon_create.png";
-import QPonUpdate from "../../Images/Qpon/QPon_update.png";
-import QPonEdit from "../../Images/Qpon/QPon_Edit.png";
-import QPonredeemCoupon from "../../Images/Qpon/QPon_redeemcoupon.png";
+// import graph from "../../Images/comp3047-web-diagram.png";
+// import QPonMain from "../../Images/Qpon/QPon_main.png";
+// import QPonSearch from "../../Images/Qpon/QPon_Search.png";
+// import QPOnMainMember from "../../Images/Qpon/QPon_Main_member.png";
+// import QPonMainAdmin from "../../Images/Qpon/QPon_Main_admin.png";
+// import QPonCreate from "../../Images/Qpon/QPon_create.png";
+// import QPonUpdate from "../../Images/Qpon/QPon_update.png";
+// import QPonEdit from "../../Images/Qpon/QPon_Edit.png";
+// import QPonredeemCoupon from "../../Images/Qpon/QPon_redeemcoupon.png";
 import Image from "react-bootstrap/Image";
 import Table from "react-bootstrap/Table";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -27,6 +27,8 @@ const IndvidualProject = () => {
   const location = useLocation();
   const { title } = useParams();
   const [ProjectPanelTitle, setProjectPanelTitle] = useState([]);
+  const [component, setComponent] = useState([]);
+  const [PageIntroduction, setPageIntroduction] = useState([]);
 
   useEffect(() => {
     setProjectPanelTitle([]);
@@ -42,10 +44,12 @@ const IndvidualProject = () => {
         return setProjectPanelTitle((ProjectTitle) => [...ProjectTitle, Title]);
       });
     }
-    const {...Component} = ProjectData.find((data)=>data.Title===title);
-    console.log(Component);
+    const { Component, PageIntroduction } = ProjectData.find(
+      (data) => data.Title === title
+    );
+    setComponent(Component);
+    setPageIntroduction(PageIntroduction);
   }, [location, title]);
-
 
   return (
     <>
@@ -60,7 +64,11 @@ const IndvidualProject = () => {
         <Row>
           <Col
             sm={2}
-            style={{ borderRight: "1px solid #ffcccc", minHeight: "100vh", justifyContent:'center' }}
+            style={{
+              borderRight: "1px solid #ffcccc",
+              minHeight: "100vh",
+              justifyContent: "center",
+            }}
           >
             {ProjectPanelTitle.map((item, index) => {
               return <p key={index}>{item}</p>;
@@ -75,32 +83,43 @@ const IndvidualProject = () => {
                 <h2 style={{ textAlign: "center" }}>{title}</h2>
               </Row>
               <Row className="justify-content-md-center">
-                <Tabs
+                <Tabs>
+                  {component.map((item, index) => {
+                    const { eventKey, Table } = item;
+                    return (
+                      <Tab eventkey={eventKey} title={eventKey}>
+                        <Row>
+                          <Col sm>
+                            <Row>
+                              
+                            </Row>
+                          </Col>
+                        </Row>
+                      </Tab>
+                    );
+                  })}
+                </Tabs>
+                {/* <Tabs
                   defaultActiveKey="Component"
                   id="uncontrolled-tab-example"
-                  className="mb-3"
                 >
                   <Tab eventKey="Component" title="Component">
                     <Row>
-                      <Col
-                        sm={6}
-                        style={{
-                          alignItems: "center",
-                          display: "flex",
-                          justifyContent: "center",
-                          borderRight: "1px solid #ffcccc",
-                        }}
-                      >
-                        <Image
-                          src={graph}
-                          style={{
-                            border: "1px solid black",
-                            width: "80%",
-                          }}
-                        />
+                      <Col sm>
+                        <Row>
+                          <Col>
+                            <Image
+                              src={graph}
+                              style={{
+                                border: "1px solid black",
+                                width:'100%',
+                                height:'100%',
+                              }}
+                            />
+                          </Col>
+                        </Row>
                       </Col>
-                      <Col sm={6}>
-   
+                      <Col>
                         <Row>
                           <Table striped bordered hover>
                             <thead>
@@ -182,7 +201,6 @@ const IndvidualProject = () => {
                   </Tab>
                   <Tab eventKey="Page" title="Page Introduction">
                     <Row className="justify-content-md-center">
-                      <h2 style={{ textAlign: "center" }}>Page Introduction</h2>
                       <Table striped bordered hover style={{ width: "90%" }}>
                         <thead>
                           <tr>
@@ -368,7 +386,7 @@ const IndvidualProject = () => {
                   <Tab eventKey="Link" title="Link">
                     Link
                   </Tab>
-                </Tabs>
+                </Tabs> */}
               </Row>
             </Row>
           </Col>
